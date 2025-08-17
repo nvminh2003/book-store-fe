@@ -24,19 +24,19 @@ export const WishlistProvider = ({ children }) => {
   const [wishlistCount, setWishlistCount] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, user } = useAuth();
   const { fetchCart } = useCart();
 
-  // Auto-fetch wishlist when user is authenticated
+  // Auto-fetch wishlist when user changes (fix Google login sync)
   useEffect(() => {
-    if (isAuthenticated) {
+    if (isAuthenticated && user) {
       fetchWishlist();
     } else {
       // Clear wishlist data when user logs out
       setWishlistItems([]);
       setWishlistCount(0);
     }
-  }, [isAuthenticated]); // Remove fetchWishlist from dependencies to avoid circular reference
+  }, [isAuthenticated, user]);
 
   // Fetch wishlist
   const fetchWishlist = useCallback(

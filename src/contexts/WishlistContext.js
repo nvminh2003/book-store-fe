@@ -90,10 +90,8 @@ export const WishlistProvider = ({ children }) => {
       try {
         setLoading(true);
         const response = await wishlistService.addToWishlist(bookId);
-        setWishlistCount(response.data.totalWishlistItems || wishlistCount + 1);
-        setTimeout(() => {
-          fetchWishlist();
-        }, 100);
+        // Sau khi thêm thành công, luôn đồng bộ lại wishlist từ backend
+        await fetchWishlist();
         return response;
       } catch (err) {
         const errorMessage =
@@ -103,7 +101,7 @@ export const WishlistProvider = ({ children }) => {
         setLoading(false);
       }
     },
-    [isAuthenticated, wishlistCount, fetchWishlist]
+    [isAuthenticated, fetchWishlist]
   );
 
   // Remove from wishlist

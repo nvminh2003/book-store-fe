@@ -123,7 +123,7 @@ const RegisterForm = () => {
         {/* Buttons */}
         <div className="col-span-1 md:col-span-2 flex items-center gap-4 mt-2">
           <a
-            href="http://localhost:9999/api/accounts/google"
+            href="https://book-store-be-t5iw.onrender.com/api/accounts/google"
             className="btn-google"
             style={{
               display: 'flex',

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import apiClient from './apiClient';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:9999/api';
+const API_URL = process.env.REACT_APP_API_URL_BACKEND || 'https://book-store-be-t5iw.onrender.com/api';
 
 const getToken = () => localStorage.getItem('accessToken') || localStorage.getItem('access_token');
 

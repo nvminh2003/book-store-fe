@@ -9,7 +9,7 @@ import bookService from '../../services/bookService';
 import categoryService from '../../services/categoryService';
 
 const API_URL =
-  process.env.REACT_APP_API_URL_BACKEND || "http://localhost:9999/api";
+  process.env.REACT_APP_API_URL_BACKEND || "https://book-store-be-t5iw.onrender.com/api";
 
 const EditBook = () => {
   const { id: bookIdParam } = useParams(); // Đổi tên để không trùng với bookId trong state nếu có

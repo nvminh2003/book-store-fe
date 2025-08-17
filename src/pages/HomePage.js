@@ -16,7 +16,7 @@ import WishlistButton from "../components/wishlist/WishlistButton";
 import wishlistService from '../services/wishlistService';
 const images = [logo, logo1, logo2];
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:9999/api';
+const API_URL = process.env.REACT_APP_API_URL_BACKEND || 'https://book-store-be-t5iw.onrender.com/api';
 
 const HomePage = () => {
     const [book, setBook] = useState(null);

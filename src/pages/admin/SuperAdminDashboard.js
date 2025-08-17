@@ -3,7 +3,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import Icon from '../../components/common/Icon';
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL_BACKEND || 'http://localhost:9999/api';
+const API_URL = process.env.REACT_APP_API_URL_BACKEND || 'https://book-store-be-t5iw.onrender.com/api';
 
 const SuperAdminDashboard = () => {
     const { user } = useAuth();

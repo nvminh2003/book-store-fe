@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 import axios from 'axios';
 import AdminTable from '../../components/admin/AdminTable';
 
-const API_URL = process.env.REACT_APP_API_URL_BACKEND || 'http://localhost:9999/api';
+const API_URL = process.env.REACT_APP_API_URL_BACKEND || 'https://book-store-be-t5iw.onrender.com/api';
 
 const AdminDevDashboard = () => {
   const { user } = useAuth();

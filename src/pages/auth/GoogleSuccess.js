@@ -15,7 +15,7 @@ const GoogleSuccess = () => {
             localStorage.setItem('refreshToken', refreshToken);
 
             // Gọi API lấy user chi tiết
-            axios.get('http://localhost:9999/api/accounts/me', {
+            axios.get('https://book-store-be-t5iw.onrender.com/api/accounts/me', {
                 headers: { Authorization: `Bearer ${accessToken}` }
             })
                 .then(res => {
